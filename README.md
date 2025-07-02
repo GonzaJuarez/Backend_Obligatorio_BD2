@@ -1,5 +1,46 @@
 # Sistema de Gestión Electoral - API Backend
 
+## Cómo levantar el backend (paso a paso)
+
+1. **Clona el repositorio y entra a la carpeta del proyecto**
+   ```bash
+   git clone <url-del-repo>
+   cd ObligatorioBDII_backend
+   ```
+
+2. **Crea el archivo `.env` en la raíz del proyecto con el siguiente contenido:**
+   ```env
+   MYSQL_HOST="localhost"
+   MYSQL_USER="root"
+   MYSQL_PASSWORD="contraseña_root"
+   MYSQL_DB="XR_Grupo5"
+
+   JWT_SECRET_KEY="frase_secrete_y_super_larga"
+   ```
+
+3. **Levanta la base de datos MySQL con Docker Compose:**
+   ```bash
+   docker-compose up -d
+   ```
+   Esto creará un contenedor MySQL accesible en el puerto 3306.
+
+4. **Instala las dependencias de Python (recomendado en un entorno virtual):**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+5. **Inicia el backend de FastAPI:**
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+
+6. **Accede a la documentación interactiva:**
+   - [http://localhost:8000/docs](http://localhost:8000/docs)
+
+---
+
 Este backend implementa un sistema de gestión electoral con FastAPI y MySQL. Cada tabla del modelo relacional tiene su propio router con endpoints CRUD.
 
 ## Tablas y Endpoints

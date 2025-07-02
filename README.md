@@ -100,8 +100,3 @@ Este backend implementa un sistema de gestión electoral con FastAPI y MySQL. Ca
 - `__init__.py`: Inicialización de módulos (vacío).
 
 ---
-
-## Notas
-- Todos los endpoints CRUD están implementados y disponibles.
-- Solo el login de operador requiere autenticación, el resto de los endpoints son públicos.
-- Puedes probar todos los endpoints desde `/docs` de FastAPI.
